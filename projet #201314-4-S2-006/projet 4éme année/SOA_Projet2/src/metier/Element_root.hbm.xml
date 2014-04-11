@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 avr. 2014 20:47:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="metier.Element_root" table="ELEMENT_ROOT">
+        <id name="id_root" type="int">
+            <column name="ID_ROOT" />
+            <generator class="native" />
+        </id>
+        <property name="name_root" type="java.lang.String">
+            <column name="NAME_ROOT" />
+        </property>
+        <many-to-one name="ref_id_format" class="metier.Format" fetch="join">
+            <column name="REF_ID_FORMAT" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 avr. 2014 20:47:15 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="metier.Zone_text" table="ZONE_TEXT">
+        <id name="id_zone" type="int">
+            <column name="ID_ZONE" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="ref_id_child" class="metier.Element_child" fetch="join">
+            <column name="REF_ID_CHILD" />
+        </many-to-one>
+        <property name="zone_name" type="java.lang.String">
+            <column name="ZONE_NAME" />
+        </property>
+    </class>
+</hibernate-mapping>

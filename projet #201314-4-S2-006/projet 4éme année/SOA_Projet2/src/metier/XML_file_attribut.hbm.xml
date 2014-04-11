@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 avr. 2014 19:04:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="metier.XML_file_attribut" table="XML_FILE_ATTRIBUT">
+        <id name="id_file_att" type="int">
+            <column name="ID_FILE_ATT" />
+            <generator class="native" />
+        </id>
+        <property name="att_value" type="java.lang.String">
+            <column name="ATT_VALUE" />
+        </property>
+        <many-to-one name="ref_id_file" class="metier.XML_file" fetch="join">
+            <column name="REF_ID_FILE" />
+        </many-to-one>
+        <many-to-one name="ref_id_root" class="metier.Element_root" fetch="join">
+            <column name="REF_ID_ROOT" />
+        </many-to-one>
+        <many-to-one name="ref_id_child" class="metier.Element_child" fetch="join">
+            <column name="REF_ID_CHILD" />
+        </many-to-one>
+        <many-to-one name="ref_id_attribut" class="metier.Attribut" fetch="join">
+            <column name="REF_ID_ATTRIBUT" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

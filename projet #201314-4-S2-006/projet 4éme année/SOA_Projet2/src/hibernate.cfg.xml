@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="">
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost/soa</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hbm2ddl.auto">create</property>
+  <property name="hbm2ddl.auto">update</property>
+  <mapping resource="metier/Attribut.hbm.xml"/>
+  <mapping resource="metier/Element_child.hbm.xml"/>
+  <mapping resource="metier/Element_root.hbm.xml"/>
+  <mapping resource="metier/Format.hbm.xml"/>
+  <mapping resource="metier/Utilisateur.hbm.xml"/>
+  <mapping resource="metier/XML_file.hbm.xml"/>
+  <mapping resource="metier/XML_file_attribut.hbm.xml"/>
+  <mapping resource="metier/XML_file_zone.hbm.xml"/>
+  <mapping resource="metier/Zone_text.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

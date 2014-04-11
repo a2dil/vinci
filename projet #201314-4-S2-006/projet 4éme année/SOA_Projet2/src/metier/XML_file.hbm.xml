@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 avr. 2014 19:04:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="metier.XML_file" table="XML_FILE">
+        <id name="id_file" type="int">
+            <column name="ID_FILE" />
+            <generator class="native" />
+        </id>
+        <property name="file" type="java.lang.String">
+            <column name="FILE" />
+        </property>
+        <many-to-one name="ref_id_user" class="metier.Utilisateur" fetch="join">
+            <column name="REF_ID_USER" />
+        </many-to-one>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <many-to-one name="ref_id_format" class="metier.Format" fetch="join">
+            <column name="REF_ID_FORMAT" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

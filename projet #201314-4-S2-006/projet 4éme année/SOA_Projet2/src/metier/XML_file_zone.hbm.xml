@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 avr. 2014 19:04:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="metier.XML_file_zone" table="XML_FILE_ZONE">
+        <id name="id_file_zone" type="int">
+            <column name="ID_FILE_ZONE" />
+            <generator class="native" />
+        </id>
+        <property name="zone_value" type="java.lang.String">
+            <column name="ZONE_VALUE" />
+        </property>
+        <many-to-one name="ref_id_file" class="metier.XML_file" fetch="join">
+            <column name="REF_ID_FILE" />
+        </many-to-one>
+        <many-to-one name="ref_id_root" class="metier.Element_root" fetch="join">
+            <column name="REF_ID_ROOT" />
+        </many-to-one>
+        <many-to-one name="ref_id_child" class="metier.Element_child" fetch="join">
+            <column name="REF_ID_CHILD" />
+        </many-to-one>
+        <many-to-one name="ref_id_zone" class="metier.Zone_text" fetch="join">
+            <column name="REF_ID_ZONE" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

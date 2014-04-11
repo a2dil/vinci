@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 avr. 2014 19:04:31 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="metier.Attribut" table="ATTRIBUT">
+        <id name="id_attribut" type="int">
+            <column name="ID_ATTRIBUT" />
+            <generator class="native" />
+        </id>
+        <property name="att_name" type="java.lang.String">
+            <column name="ATT_NAME" />
+        </property>
+        <many-to-one name="ref_id_child" class="metier.Element_child" fetch="join">
+            <column name="REF_ID_CHILD" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
